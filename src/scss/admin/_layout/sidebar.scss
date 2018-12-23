@@ -1,0 +1,62 @@
+.admin-layout-sidebar {
+  background: rgba(46, 69, 5, 0.5);
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1);
+
+  ul {
+
+    li {
+
+      a {
+        display: block;
+        width: 100%;
+        color: white;
+        padding: .5rem .5rem .5rem 0;
+
+        &:hover {
+          color: rgba(0, 0, 0, 0.5);
+          background: darken(rgba(46, 69, 5, 0.5), 2);
+        }
+
+        &:active {
+          color: #6c757d;
+          background: darken(rgba(46, 69, 5, 0.5), 2);
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .admin-layout-sidebar {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+    button {
+      margin-left: 5px;
+    }
+
+    ul {
+      background: darken(rgba(46, 69, 5, 0.5), 1);
+      position: fixed;
+      top: 50px;
+      width:100%;
+      overflow: hidden;
+      height: 0;
+      transition: height .4s linear;
+
+      &.active {
+        height: 100%;
+      }
+    }
+  }
+}
+

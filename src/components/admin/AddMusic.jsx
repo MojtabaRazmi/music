@@ -7,7 +7,7 @@ import {
   Label
 } from 'reactstrap';
 
-class Panel extends Component {
+class AddMusic extends Component {
   render () {
     return (
       <div className='container-fluid'>
@@ -44,4 +44,4 @@ class Panel extends Component {
 
 
 
-export default Panel;
+export default AddMusic;
