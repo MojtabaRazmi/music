@@ -15,7 +15,7 @@ class AdminSideBar extends Component {
       <div className='admin-layout-sidebar'>
         <Button color='secondary' className='d-sm-none' onClick={
           () => this.setState({ isActive: !this.state.isActive })
-        }>Show Menu</Button>
+        }>{this.state.isActive ? 'Hide Menu':'show menu' }</Button>
 
         <ul className={this.state.isActive ? 'active' : null}>
           {adminNavLinks.map(adminNavLink => (

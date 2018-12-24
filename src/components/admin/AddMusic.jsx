@@ -9,6 +9,7 @@ import {
 
 class AddMusic extends Component {
   render () {
+    console.log('add music')
     return (
       <div className='container-fluid'>
         <Form>

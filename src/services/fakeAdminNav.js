@@ -2,7 +2,7 @@ const adminNavLinks =[
   {
     id: 1,
     text: 'add Music',
-    link: '/admin/add-music',
+    link: '/admin/addmusic',
     icon: 'fa fa-plus feather'
   },
   {

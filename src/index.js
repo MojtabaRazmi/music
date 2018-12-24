@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter,Switch,Route} from 'react-router-dom'
+import {BrowserRouter,Switch,Route, Redirect} from 'react-router-dom'
 import './index.css';
 import './App.scss'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import AdminDashboard from './components/admin/adminDashboard'
+import AddMusic from './components/admin/AddMusic'
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path ='/admin' exact component ={AdminDashboard}/>
+      <Redirect from='/admin' to='/admin/panel' />
+      <Route path ='/admin/:name' exact component ={AdminDashboard}/>
+
       <Route path ='/' component ={App}/>
     </Switch>
   </BrowserRouter>
