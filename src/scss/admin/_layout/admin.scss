@@ -1,0 +1,16 @@
+.admin-layout{
+  main{
+    top:60px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+
+@include media-breakpoint-down(xs) {
+  main{
+    top:100px;
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,20 +1,28 @@
 import React, { Component } from 'react'
 import AdminSideBar from './adminSideBar'
 import AdminNavbar from './NavBar'
-import {Switch, Route} from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import AddMusic from './AddMusic'
+import ListMusic from './ListMusic'
+import DeleteMusic from './DeleteMusic'
+import EditMusic from './EditMusic'
+import { ToastContainer, Zoom } from 'react-toastify'
 
 class AdminDashboard extends Component {
   render () {
 
     return (
-      <div className='container-fluid1'>
+      <div className='admin-layout'>
+        <ToastContainer transition={Zoom}/>
         <AdminNavbar/>
-        <div className='row'>
         <AdminSideBar/>
-          <main role='main' className='col-md-9 ml-sm-auto col-lg-10 px-4'>
+        <div className="admin-layout-wrapper">
+          <main role='main'>
             <Switch>
-              <Route path='/admin/addmusic' component={AddMusic}/>
+              <Route path='/admin/add-music' component={AddMusic}/>
+              <Route path='/admin/list-music' component={ListMusic}/>
+              <Route path='/admin/delete-music' component={DeleteMusic}/>
+              <Route path='/admin/edit-music' component={EditMusic}/>
             </Switch>
           </main>
         </div>

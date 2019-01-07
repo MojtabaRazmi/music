@@ -1,16 +1,22 @@
 .admin-layout-sidebar {
-  background:rgba(46,49,69,0.45);
-  width: 200px;
+  background:rgba(46,49,69,1);
+
   height: 100%;
   position: fixed;
+  width: 200px;
   left: 0;
   box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1);
   border-radius: .5rem;
+  top:65px;
+  z-index: 100;
 
   ul {
+    &.selected{
+      color: #6c757d;
+      background: darken(rgba(46,49,69,0.45), 2);
+    }
 
     li {
-
       a {
         display: block;
         width: 100%;
@@ -21,11 +27,12 @@
           color: rgba(0, 0, 0, 0.5);
           background: darken(rgba(46,49,69,0.45), 2);
         }
-
-        &:active {
-          color: #6c757d;
+        &:focus {
+          color:rgba(0,0,0,0.45);
           background: darken(rgba(46,49,69,0.45), 2);
+
         }
+
       }
     }
   }
@@ -33,28 +40,47 @@
 
 @include media-breakpoint-down(xs) {
   .admin-layout-sidebar {
+    top: 0;
     width: 100%;
     height: 50px;
-    position: relative;
+    //position: relative;
     display: flex;
     align-items: center;
+    z-index: 10;
+    background:rgba(46,49,69,1);
+
 
     button {
-      margin-left: 10px;
+      margin-left: 30px;
     }
 
     ul {
       background: darken(rgba(46,49,69,0.45), 1);
       position: fixed;
-      top: 106px;
+      top: 50px;
       width:100%;
       overflow: hidden;
       height: 0;
       transition: height .4s linear;
       border-radius: .5rem;
 
-      &.active {
-        height: 100%;
+      &.selected {
+        height: 200px;
+        //display: block !important;
+        background: darken(rgba(46,49,69,.85), 1);
+        ul{
+          li{
+            a{
+              &:hover{
+                color: white !important;
+              }
+            }
+          }
+        }
+      }
+
+      li{
+        margin-right: 5px;
       }
     }
   }

@@ -28,10 +28,10 @@ class AdminNavbar extends React.Component {
   render () {
     return (
       <div className='admin-layout-navbar'>
-        <Navbar light >
+        <Navbar light className={!this.state.collapsed ? 'custom' : null}>
           <NavbarBrand href="/" >Hello Dear USER</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} />
-          <Collapse isOpen={!this.state.collapsed} navbar>
+          <NavbarToggler onClick={this.toggleNavbar}  />
+          <Collapse isOpen={!this.state.collapsed} navbar >
             <Nav navbar>
               <NavItem>
                 <NavLink href="/">Option 1</NavLink>

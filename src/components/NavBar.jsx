@@ -50,7 +50,7 @@ class NavBar extends Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    <NavLink href="/admin">Login As Admin</NavLink>
                   </DropdownItem>
                   <DropdownItem>
                     Option 2

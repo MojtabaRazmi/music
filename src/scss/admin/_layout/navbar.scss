@@ -2,7 +2,32 @@
   right: 0;
   left: 0;
   width: 100%;
-  position: relative;
-  background-color: darken(rgba(46,49,69,0.45), 5);
-  border-radius: 1rem;
+  position: fixed;
+  background-color: darken(rgba(46,49,69,1), 5);
+  border-radius: .5rem;
+  z-index: 1;
+
+  .custom{
+    right: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(46,49,69,1);
+    border-radius: .5rem;
+    z-index: 1;
+  }
+
+}
+
+@include media-breakpoint-down(xs) {
+  .admin-layout-navbar{
+    background:rgba(46,49,69,1) ;
+    overflow: hidden;
+    display: none;
+    button {
+      overflow: hidden;
+      height: 0;
+      display: none;
+    }
+  }
 }

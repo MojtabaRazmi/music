@@ -1,0 +1,117 @@
+.admin-layout-listMusic-table {
+  table {
+    width: 100%;
+
+    thead {
+      tr {
+        text-align: center;
+
+        th {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        height: 100px;
+        background: #ccc;
+        text-align: center;
+        position: relative;
+
+        &:nth-child(2n) {
+          background: #f2f2f2;
+        }
+
+        &:hover {
+          background: #17a2b8;
+        }
+
+        th {
+          vertical-align: middle;
+        }
+
+        td {
+          vertical-align: middle;
+
+          img {
+            height: 80px;
+            width: 80px;
+          }
+
+          Button {
+            margin: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .admin-layout-listMusic-table {
+    table {
+      display: block;
+
+      thead {
+        tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+          text-align: center;
+
+          th {
+            vertical-align: middle;
+            width: 5px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          height: 100px;
+          background: #ccc;
+          text-align: center;
+          position: relative;
+
+          &:nth-child(2n) {
+            background: #f2f2f2;
+          }
+
+          &:hover {
+            background: #17a2b8;
+          }
+
+          th {
+            vertical-align: middle;
+          }
+
+          td {
+            vertical-align: middle;
+
+            img {
+              height: 80px;
+              width: 80px;
+            }
+
+            Button {
+              margin: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.admin-layout-wrapper {
+  margin: .5rem .5rem .5rem 200px;
+}
+
+@include media-breakpoint-down(xs) {
+  .admin-layout-wrapper {
+    margin-left: 0px;
+    padding: .5rem;
+  }
+}
+

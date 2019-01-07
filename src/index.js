@@ -11,9 +11,8 @@ import AddMusic from './components/admin/AddMusic'
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Redirect from='/admin' to='/admin/panel' />
-      <Route path ='/admin/:name' exact component ={AdminDashboard}/>
-
+      {/*<Redirect from='/admin' to='/admin/panel' />*/}
+      <Route path ='/admin' component ={AdminDashboard}/>
       <Route path ='/' component ={App}/>
     </Switch>
   </BrowserRouter>
