@@ -18,6 +18,7 @@ class AddMusic extends Component {
     cover :'',
     url :'',
     filename :'',
+    covername :''
   }
 
   handleSubmit=async e=>{
@@ -120,6 +121,19 @@ class AddMusic extends Component {
               value={this.state.filename}
               onChange={e=>{
                 this.setState({filename:e.target.value})
+              }}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="CoverName">Cover Name</Label>
+            <Input
+              type="text"
+              name="CoverName"
+              id="CoverName"
+              placeholder="Enter The Cover Name"
+              value={this.state.covername}
+              onChange={e=>{
+                this.setState({covername:e.target.value})
               }}
             />
           </FormGroup>

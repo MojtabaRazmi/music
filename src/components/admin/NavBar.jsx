@@ -25,6 +25,10 @@ class AdminNavbar extends React.Component {
     })
   }
 
+  logOut = ()=>{
+    localStorage.removeItem('token')
+  }
+
   render () {
     return (
       <div className='admin-layout-navbar'>
@@ -34,10 +38,10 @@ class AdminNavbar extends React.Component {
           <Collapse isOpen={!this.state.collapsed} navbar >
             <Nav navbar>
               <NavItem>
-                <NavLink href="/">Option 1</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">Option 2</NavLink>
+                <NavLink onClick={this.logOut} href='/'>
+                  <i className='fa fa-sign-out m-2'/>
+                  Sign Out
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

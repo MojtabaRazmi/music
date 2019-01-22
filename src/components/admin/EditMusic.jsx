@@ -17,7 +17,8 @@ class EditMusic extends Component {
     album:'',
     cover:'',
     url:'',
-    filename:''
+    filename:'',
+    covername:''
   }
 
   componentDidMount () {
@@ -30,7 +31,8 @@ class EditMusic extends Component {
       album:music.album,
       cover:music.cover,
       url:music.url,
-      filename:music.filename
+      filename:music.filename,
+      covername:music.covername
     })
   }
 
@@ -134,6 +136,19 @@ class EditMusic extends Component {
               value={this.state.filename}
               onChange={e=>{
                 this.setState({filename:e.target.value})
+              }}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="CoverName">Cover Name</Label>
+            <Input
+              type="text"
+              name="CoverName"
+              id="CoverName"
+              placeholder="Enter The Cover Name"
+              value={this.state.covername}
+              onChange={e=>{
+                this.setState({covername:e.target.value})
               }}
             />
           </FormGroup>

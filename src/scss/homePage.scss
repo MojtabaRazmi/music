@@ -2,4 +2,15 @@
   margin: 2px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
+  .dropdown-menu-right{
+    background-color: rgba(161, 161, 161, 1);
+    transition: height 1s linear;
+    button{
+      padding : 5px;
+      &:hover{
+        background-color: darken(rgba(161, 161, 161, 1),.5);
+        font-weight: bold;
+      }
+    }
+  }
 }

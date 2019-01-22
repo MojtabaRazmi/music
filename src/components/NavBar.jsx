@@ -50,7 +50,11 @@ class NavBar extends Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <NavLink href="/admin">Login As Admin</NavLink>
+                    <NavLink href={(localStorage.getItem('token') === null)?
+                      '/login': '/admin'}
+                    >
+                      {(localStorage.getItem('token') === null)? 'Login As Admin' : 'you are logged in'}
+                    </NavLink>
                   </DropdownItem>
                   <DropdownItem>
                     Option 2

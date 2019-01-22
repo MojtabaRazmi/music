@@ -76,7 +76,7 @@ class ListMusic extends Component {
                 </th>
                 <td>{music.title}</td>
                 <td>{music.singer}</td>
-                <td><img src={music.cover}/></td>
+                <td><img alt='there is no specific ALT' src={music.cover}/></td>
                 <td>{music.filename}</td>
                 <td>
                   <Button className='btn btn-danger' onClick={() => this.handleDelete(music._id)}>

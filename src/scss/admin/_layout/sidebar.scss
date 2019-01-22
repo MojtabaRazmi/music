@@ -1,13 +1,13 @@
 .admin-layout-sidebar {
-  background:rgba(46,49,69,1);
+  background:rgba(127,127,127,1);
 
   height: 100%;
   position: fixed;
   width: 200px;
-  left: 0;
+  left: 3px;
   box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1);
   border-radius: .5rem;
-  top:65px;
+  top:5px;
   z-index: 100;
 
   ul {
@@ -24,13 +24,14 @@
         padding: .5rem .5rem .5rem 0;
 
         &:hover {
-          color: rgba(0, 0, 0, 0.5);
-          background: darken(rgba(46,49,69,0.45), 2);
+          color: #d9162f;
+          background: darken(rgba(46,49,69,0.45), 1);
+          border-radius: 1rem;
         }
         &:focus {
           color:rgba(0,0,0,0.45);
-          background: darken(rgba(46,49,69,0.45), 2);
-
+          background: rgba(55, 121, 129, 1);
+          border-radius: 1rem;
         }
 
       }

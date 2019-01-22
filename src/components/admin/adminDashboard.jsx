@@ -9,6 +9,11 @@ import EditMusic from './EditMusic'
 import { ToastContainer, Zoom } from 'react-toastify'
 
 class AdminDashboard extends Component {
+  componentDidMount(){
+    if(localStorage.getItem('token')===null){
+      this.props.history.push('/login')
+    }
+  }
   render () {
 
     return (
@@ -23,6 +28,13 @@ class AdminDashboard extends Component {
               <Route path='/admin/list-music' component={ListMusic}/>
               <Route path='/admin/delete-music' component={DeleteMusic}/>
               <Route path='/admin/edit-music' component={EditMusic}/>
+              {/*<Route exact path="/" render={() => (*/}
+                {/*loggedIn ? (*/}
+                  {/*<Redirect to="/dashboard"/>*/}
+                {/*) : (*/}
+                  {/*<PublicHomePage/>*/}
+                {/*)*/}
+              {/*)}/>*/}
             </Switch>
           </main>
         </div>
